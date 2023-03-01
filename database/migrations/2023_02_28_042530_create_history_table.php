@@ -16,10 +16,8 @@ return new class extends Migration
         Schema::create('history', function (Blueprint $table) {
             $table->id();
             $table->foreignId('product_id')->constrained()->cascadeOnDelete();
-            $table->integer('incommings_qnty')->nullable();
-            $table->integer('sales_qnty')->nullable();
-            $table->integer('damage_qnty')->nullable();
-            $table->tinyInteger('status')->comment('1=incommings_qnty,2=sales_qnty,3=damage_qnty');
+            $table->integer('quantity');
+            $table->tinyInteger('status')->comment('1=incommings_qnty,2=sales_qnty,3=damage_qnty,4=remove');
             $table->timestamps();
         });
     }

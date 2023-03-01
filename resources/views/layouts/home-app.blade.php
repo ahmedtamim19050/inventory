@@ -25,10 +25,18 @@
 </head>
 
 <body class=" card-no-border">
+    <div class="container mt-3 d-flex justify-content-end">
+        <a class="btn btn-primary" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+            Logout
+        </a>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            @csrf
+        </form>
+    </div>
 
     <div id="main-wrapper">
-     
-   
+
+
 
         @yield('content')
 

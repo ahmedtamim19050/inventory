@@ -86,7 +86,7 @@ class HomeController extends Controller
             'product_id' => $product->id,
         ]);
         }
-        if ($request->status == 2 || $request->status == 3) {
+        if ($request->status == 2 || $request->status == 3 || $request->status == 4) {
             if ($product->quantity >= $request->quantity) {
 
                 $product->update([
@@ -112,12 +112,12 @@ class HomeController extends Controller
         if ($history->status == 2 || $history->status == 3) {
                
             $product->update([
-                'quantity' => $product->quantity - $history->quantity,
+                'quantity' => $product->quantity + $history->quantity,
             ]);
         }
         else{
             $product->update([
-                'quantity' => $product->quantity + $history->quantity,
+                'quantity' => $product->quantity - $history->quantity,
             ]);
         }
         $history->delete();

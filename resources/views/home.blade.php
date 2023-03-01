@@ -37,7 +37,7 @@
                 <div class="card-body">
                     <div class="d-flex">
                         <div>
-                            <h5 class="card-title">Histories</h5>
+                            <h5 class="card-title">Products</h5>
                         </div>
                         <!-- <div class="ms-auto">
                                 <select class="form-select b-0">
@@ -55,8 +55,10 @@
                                 <tr>
                                     <th colspan="1">ID</th>
                                     <th>Name</th>
-                                    <th>Price</th>
+                                    <th>Unit Price</th>
+                        
                                     <th>Quantity</th>
+                                    <th>Total Price</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -71,9 +73,11 @@
                                     </td>
 
                                     <td>{{ $product->price }}</td>
+                                  
                                     <td>
                                         <h6>{{$product->quantity ==!null ? $product->quantity : 0}}</h6>
                                     </td>
+                                    <td>{{ $product->price * ($product->quantity > 0 ? $product->quantity :1) }}</td>
                                     <td>
 
                                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#productEditForm" data-product-name="{{ $product->name }}" data-product-id="{{ $product->id }}" data-product-price="{{ $product->price }}">Edit</button>
@@ -82,7 +86,7 @@
                                             @csrf
                                             <button type="submit" class="btn btn-danger">Delete</button>
                                         </form>
-                                        <a href="{{route('history.index',$product)}}" class="btn btn-success">History</a>
+                                        <a href="{{route('history.index',$product)}}" class="btn btn-success">Stock</a>
                                     </td>
                                 </tr>
 

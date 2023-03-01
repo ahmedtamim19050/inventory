@@ -63,6 +63,7 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
+            // 'registerable' => false,
         ],
 
         // 'users' => [
@@ -92,6 +93,7 @@ return [
             'table' => 'password_resets',
             'expire' => 60,
             'throttle' => 60,
+            // 'reset_passwords' => false,
         ],
     ],
 

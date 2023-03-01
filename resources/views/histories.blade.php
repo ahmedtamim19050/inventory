@@ -20,7 +20,7 @@
         </div>
 
         <div class="col-md-2 mt-2">
-            <button type="button" class="btn waves-effect waves-light btn btn-info pull-right text-white" data-toggle="modal" data-target="#historyCreate">Create a History</button>
+            <button type="button" class="btn waves-effect waves-light btn btn-info pull-right text-white" data-toggle="modal" data-target="#historyCreate">Update Stock</button>
 
         </div>
 
@@ -62,7 +62,7 @@
                                     <th colspan="1">ID</th>
                                     <th>Status</th>
                                     <th>Quantity</th>
-                                    <th>Action</th>
+                                    <!-- <th>Action</th> -->
                                 </tr>
                             </thead>
                             <tbody>
@@ -76,13 +76,15 @@
                                         <h4 class="text-primary">Stock in</h4>
                                         @elseif ($item->status==2)
                                         <h4 class="text-warning">Stock out</h4>
+                                        @elseif ($item->status==3)
+                                        <h4 class="text-warning">Damage</h4>
                                         @else
-                                        <h4 class="text-danger">Damage</h4>
+                                        <h4 class="text-info">Remove</h4>
                                         @endif
                                     </td>
 
                                     <td>{{ $item->quantity }}</td>
-                                    <td>
+                                    <!-- <td>
 
 
 
@@ -90,7 +92,7 @@
                                             @csrf
                                             <button type="submit" class="btn btn-danger">Delete</button>
                                         </form>
-                                    </td>
+                                    </td> -->
                                 </tr>
 
 
@@ -142,6 +144,7 @@
                             <option value="1">Stock In</option>
                             <option value="2">Stock Out</option>
                             <option value="3">Damage</option>
+                            <option value="4">Remove</option>
                         </select>
 
                     </div>

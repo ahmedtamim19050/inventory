@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id()->autoIncrement();
             $table->string('name');
             $table->integer('price');
-       
+            $table->integer('quantity')->nullable()->default(0);
             $table->timestamps();
         });
     }
