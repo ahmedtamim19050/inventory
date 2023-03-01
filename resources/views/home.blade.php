@@ -33,7 +33,7 @@
     <div class="row">
 
         <div class="col-lg-12 d-flex align-items-stretch">
-            <div class="card w-100">
+            <div class="card w-100 border border-dark">
                 <div class="card-body">
                     <div class="d-flex">
                         <div>

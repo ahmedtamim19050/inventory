@@ -15,13 +15,13 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
 
     <link href="{{asset('assets/node_modules/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{asset('assets/node_modules/perfect-scrollbar/css/perfect-scrollbar.css')}}" rel="stylesheet">
-    <link href="{{asset('assets/node_modules/morrisjs/morris.css')}}" rel="stylesheet">
-    <link href="{{asset('assets/node_modules/c3-master/c3.min.css')}}" rel="stylesheet">
+    {{-- <link href="{{asset('assets/node_modules/perfect-scrollbar/css/perfect-scrollbar.css')}}" rel="stylesheet"> --}}
+    {{-- <link href="{{asset('assets/node_modules/morrisjs/morris.css')}}" rel="stylesheet"> --}}
+    {{-- <link href="{{asset('assets/node_modules/c3-master/c3.min.css')}}" rel="stylesheet"> --}}
 
     <link href="{{asset('assets/css/style.css')}}" rel="stylesheet">
-    <link href="{{asset('assets/css/pages/dashboard1.css')}}" rel="stylesheet">
-    <link href="{{asset('assets/css/colors/default.css')}}" id="theme" rel="stylesheet">
+    {{-- <link href="{{asset('assets/css/pages/dashboard1.css')}}" rel="stylesheet"> --}}
+    {{-- <link href="{{asset('assets/css/colors/default.css')}}" id="theme" rel="stylesheet"> --}}
 </head>
 
 <body class=" card-no-border">

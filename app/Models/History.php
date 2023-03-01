@@ -9,6 +9,7 @@ class History extends Model
 {
     use HasFactory;
     protected $guarded=[];
+    protected $table = 'history';
     public function products()
     {
         return $this->hasMany(History::class,'product_id');
